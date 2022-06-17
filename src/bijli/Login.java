@@ -58,31 +58,31 @@ public class Login extends javax.swing.JFrame {
 
         jLabel4.setText("Name");
         jframe_signup.getContentPane().add(jLabel4);
-        jLabel4.setBounds(40, 50, 70, 16);
+        jLabel4.setBounds(40, 50, 70, 18);
 
         jLabel5.setText("Address");
         jframe_signup.getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 120, 70, 16);
+        jLabel5.setBounds(40, 120, 70, 18);
 
         jLabel6.setText("email");
         jframe_signup.getContentPane().add(jLabel6);
-        jLabel6.setBounds(40, 200, 60, 16);
+        jLabel6.setBounds(40, 200, 60, 18);
 
         jLabel7.setText("Phone no.");
         jframe_signup.getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 240, 80, 16);
+        jLabel7.setBounds(30, 240, 80, 18);
 
         jLabel8.setText("zipcode");
         jframe_signup.getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, 160, 80, 16);
+        jLabel8.setBounds(30, 160, 80, 18);
 
         jLabel9.setText("Joining date");
         jframe_signup.getContentPane().add(jLabel9);
-        jLabel9.setBounds(40, 290, 100, 16);
+        jLabel9.setBounds(40, 290, 100, 18);
         jframe_signup.getContentPane().add(tf7);
-        tf7.setBounds(170, 200, 240, 22);
+        tf7.setBounds(170, 200, 240, 24);
         jframe_signup.getContentPane().add(tf6);
-        tf6.setBounds(170, 160, 240, 22);
+        tf6.setBounds(170, 160, 240, 24);
 
         tf4.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
@@ -90,13 +90,13 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_signup.getContentPane().add(tf4);
-        tf4.setBounds(170, 50, 240, 22);
+        tf4.setBounds(170, 50, 240, 24);
         jframe_signup.getContentPane().add(tf8);
-        tf8.setBounds(170, 240, 240, 22);
+        tf8.setBounds(170, 240, 240, 24);
         jframe_signup.getContentPane().add(tf5);
-        tf5.setBounds(170, 110, 240, 22);
+        tf5.setBounds(170, 110, 240, 24);
         jframe_signup.getContentPane().add(tf9);
-        tf9.setBounds(180, 290, 230, 22);
+        tf9.setBounds(180, 290, 230, 24);
 
         jButton5.setText("SIGN UP");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -105,7 +105,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_signup.getContentPane().add(jButton5);
-        jButton5.setBounds(200, 410, 180, 22);
+        jButton5.setBounds(200, 410, 180, 24);
 
         jButton6.setText("CLEAR");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -114,13 +114,13 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_signup.getContentPane().add(jButton6);
-        jButton6.setBounds(50, 410, 72, 22);
+        jButton6.setBounds(50, 410, 79, 24);
 
         jLabel10.setText("Create Password");
         jframe_signup.getContentPane().add(jLabel10);
-        jLabel10.setBounds(40, 340, 120, 16);
+        jLabel10.setBounds(40, 340, 120, 18);
         jframe_signup.getContentPane().add(pf2);
-        pf2.setBounds(180, 340, 230, 22);
+        pf2.setBounds(180, 340, 230, 24);
 
         jframe_home.setTitle("HOME");
         jframe_home.setSize(new java.awt.Dimension(500, 500));
@@ -133,11 +133,11 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_home.getContentPane().add(jButton7);
-        jButton7.setBounds(60, 60, 130, 50);
+        jButton7.setBounds(60, 60, 200, 50);
 
-        jButton8.setText("jButton8");
+        jButton8.setText("Monthly payment status");
         jframe_home.getContentPane().add(jButton8);
-        jButton8.setBounds(230, 150, 75, 22);
+        jButton8.setBounds(60, 130, 210, 60);
 
         jframe_showcustomerdetails.getContentPane().setLayout(null);
 
@@ -150,11 +150,11 @@ public class Login extends javax.swing.JFrame {
 
         jLabel2.setText("Meter number");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(70, 50, 110, 16);
+        jLabel2.setBounds(70, 50, 110, 18);
 
         jLabel3.setText("PASSWORD");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(90, 140, 62, 16);
+        jLabel3.setBounds(90, 140, 88, 18);
 
         tf1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,9 +162,9 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(tf1);
-        tf1.setBounds(220, 40, 260, 22);
+        tf1.setBounds(220, 40, 260, 24);
         getContentPane().add(pf1);
-        pf1.setBounds(220, 130, 260, 22);
+        pf1.setBounds(220, 130, 260, 24);
 
         jButton1.setText("CLEAR");
         jButton1.setPreferredSize(new java.awt.Dimension(50, 50));
