@@ -37,6 +37,7 @@ public class Login extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jframe_showcustomerdetails = new javax.swing.JFrame();
+        jframe_paymentstatus = new javax.swing.JFrame();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         tf1 = new javax.swing.JTextField();
@@ -136,6 +137,11 @@ public class Login extends javax.swing.JFrame {
         jButton7.setBounds(60, 60, 200, 50);
 
         jButton8.setText("Monthly payment status");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
         jframe_home.getContentPane().add(jButton8);
         jButton8.setBounds(60, 130, 210, 60);
 
@@ -295,6 +301,10 @@ public class Login extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        jframe_paymentstatus.setVisible(true);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     public static void main(String args[]) {
 
     }
@@ -319,6 +329,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JFrame jframe_home;
+    private javax.swing.JFrame jframe_paymentstatus;
     private javax.swing.JFrame jframe_showcustomerdetails;
     private javax.swing.JFrame jframe_signup;
     private javax.swing.JPasswordField pf1;
