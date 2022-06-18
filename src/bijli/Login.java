@@ -37,8 +37,10 @@ public class Login extends javax.swing.JFrame {
         jframe_home = new javax.swing.JFrame();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jframe_showcustomerdetails = new javax.swing.JFrame();
         jframe_paymentstatus = new javax.swing.JFrame();
+        jframe_adminhome = new javax.swing.JFrame();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         tf1 = new javax.swing.JTextField();
@@ -59,31 +61,31 @@ public class Login extends javax.swing.JFrame {
 
         jLabel4.setText("Name");
         jframe_signup.getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 50, 70, 18);
+        jLabel4.setBounds(60, 30, 70, 18);
 
         jLabel5.setText("Address");
         jframe_signup.getContentPane().add(jLabel5);
-        jLabel5.setBounds(50, 100, 70, 18);
+        jLabel5.setBounds(60, 80, 70, 18);
 
         jLabel6.setText("email");
         jframe_signup.getContentPane().add(jLabel6);
-        jLabel6.setBounds(50, 200, 50, 18);
+        jLabel6.setBounds(60, 180, 50, 18);
 
         jLabel7.setText("Phone no.");
         jframe_signup.getContentPane().add(jLabel7);
-        jLabel7.setBounds(50, 250, 80, 18);
+        jLabel7.setBounds(60, 230, 80, 18);
 
         jLabel8.setText("Zipcode");
         jframe_signup.getContentPane().add(jLabel8);
-        jLabel8.setBounds(50, 150, 70, 18);
+        jLabel8.setBounds(60, 130, 70, 18);
 
         jLabel9.setText("Joining date");
         jframe_signup.getContentPane().add(jLabel9);
-        jLabel9.setBounds(50, 300, 100, 18);
+        jLabel9.setBounds(60, 280, 100, 18);
         jframe_signup.getContentPane().add(tf7);
-        tf7.setBounds(180, 200, 240, 24);
+        tf7.setBounds(190, 180, 240, 24);
         jframe_signup.getContentPane().add(tf6);
-        tf6.setBounds(180, 150, 240, 24);
+        tf6.setBounds(190, 130, 240, 24);
 
         tf4.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
@@ -91,13 +93,13 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_signup.getContentPane().add(tf4);
-        tf4.setBounds(180, 50, 240, 24);
+        tf4.setBounds(190, 30, 240, 24);
         jframe_signup.getContentPane().add(tf8);
-        tf8.setBounds(180, 250, 240, 24);
+        tf8.setBounds(190, 230, 240, 24);
         jframe_signup.getContentPane().add(tf5);
-        tf5.setBounds(180, 100, 240, 24);
+        tf5.setBounds(190, 80, 240, 24);
         jframe_signup.getContentPane().add(tf9);
-        tf9.setBounds(180, 300, 240, 24);
+        tf9.setBounds(190, 280, 240, 24);
 
         jButton5.setText("SIGN UP");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +108,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_signup.getContentPane().add(jButton5);
-        jButton5.setBounds(220, 410, 150, 40);
+        jButton5.setBounds(230, 390, 160, 40);
 
         jButton6.setText("CLEAR");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -115,14 +117,15 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_signup.getContentPane().add(jButton6);
-        jButton6.setBounds(80, 410, 90, 40);
+        jButton6.setBounds(90, 390, 110, 40);
 
-        jLabel10.setText("Create Password");
+        jLabel10.setText("New Password");
         jframe_signup.getContentPane().add(jLabel10);
-        jLabel10.setBounds(50, 350, 120, 18);
+        jLabel10.setBounds(60, 330, 120, 18);
         jframe_signup.getContentPane().add(pf2);
-        pf2.setBounds(180, 350, 240, 24);
+        pf2.setBounds(190, 330, 240, 24);
 
+        jframe_home.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_home.setTitle("HOME");
         jframe_home.setSize(new java.awt.Dimension(500, 500));
         jframe_home.getContentPane().setLayout(null);
@@ -145,7 +148,23 @@ public class Login extends javax.swing.JFrame {
         jframe_home.getContentPane().add(jButton8);
         jButton8.setBounds(60, 130, 210, 60);
 
+        jButton9.setText("Log out");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jframe_home.getContentPane().add(jButton9);
+        jButton9.setBounds(90, 460, 150, 50);
+
+        jframe_showcustomerdetails.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_showcustomerdetails.getContentPane().setLayout(null);
+
+        jframe_paymentstatus.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jframe_paymentstatus.getContentPane().setLayout(null);
+
+        jframe_adminhome.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jframe_adminhome.getContentPane().setLayout(null);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("LOGIN");
@@ -219,16 +238,16 @@ public class Login extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         String password = String.valueOf(pf1.getPassword());
-        if(String.valueOf(tf1.getText()).equals("") || password.equals(""))
+        if(String.valueOf(tf1.getText()).equals("") || password.equals(""))     // Check if all fields are filled
         {
             JOptionPane.showMessageDialog(this,"Fill all fields");
             tf1.setText("");
             pf1.setText("");
             return;
         }
-        try
+        try                                                                     // Handle Exception for converting string to int using parseInt
         {
-        meter_no=Integer.parseInt((tf1.getText()).trim());
+        meter_id=Integer.parseInt((tf1.getText()).trim());
         }
         catch(NumberFormatException e)
         {
@@ -237,7 +256,7 @@ public class Login extends javax.swing.JFrame {
             pf1.setText("");
             return;
         }
-        try
+        try                                                                     // Check for Login authentication
         {
             Connection conn=ConnectionProvider.getConnection();
             Statement stmt=conn.createStatement();
@@ -245,12 +264,12 @@ public class Login extends javax.swing.JFrame {
             ResultSet rs=stmt.executeQuery(query);
             while(rs.next())
             {
-                if(meter_no==rs.getInt(1) && password.equals(rs.getString(2)))           // 1 represents column number of meter_id and (2) as pwd
+                if(meter_id==rs.getInt(1) && password.equals(rs.getString(2)))           // 1 represents column number of meter_id and (2) as pwd
                 {
                     JOptionPane.showMessageDialog(this, "Logged in succesffully");
                     dispose();
                     jframe_home.getContentPane().setBackground(new java.awt.Color(211,211,211));
-                    jframe_home.setSize(500,500);
+                    jframe_home.setSize(400,600);
                     jframe_home.setLocationRelativeTo(null);
                     jframe_home.setVisible(true);
                     return;
@@ -264,10 +283,9 @@ public class Login extends javax.swing.JFrame {
         catch(Exception e)
                 {
                     JOptionPane.showMessageDialog(this,e.getMessage());
+                    tf1.setText("");
+                    pf1.setText("");
                 }
-     
-
-
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void tf1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf1ActionPerformed
@@ -295,9 +313,14 @@ public class Login extends javax.swing.JFrame {
             Statement stmt=conn.createStatement();
             String query="insert into customer_details values(default,'"+name+"','"+address+"','"+zipcode+"','"+email+"','"+phone_number+"','"+joining+"');";
             stmt.executeUpdate(query);
-            query="insert into login_details values(default,'"+pswd+"');";
+            query="select meter_id from customer_details where phone_no='"+phone_number+"';";
+            ResultSet rs=stmt.executeQuery(query);
+            if(rs.next())
+                meter_id=rs.getInt(1);
+            query="insert into login_details values("+meter_id+",'"+pswd+"');";
             stmt.executeUpdate(query);
             JOptionPane.showMessageDialog(this,"Registered succesffully");
+            jframe_signup.dispose();
         }
         catch(Exception e)
                 {
@@ -328,6 +351,13 @@ public class Login extends javax.swing.JFrame {
         jframe_paymentstatus.setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
 
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        meter_id=0;
+        JOptionPane.showMessageDialog(this,"Logged out successfully");
+        jframe_home.dispose();
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
     public static void main(String args[]) {
 
     }
@@ -341,6 +371,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -351,6 +382,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JFrame jframe_adminhome;
     private javax.swing.JFrame jframe_home;
     private javax.swing.JFrame jframe_paymentstatus;
     private javax.swing.JFrame jframe_showcustomerdetails;
@@ -365,5 +397,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField tf8;
     private javax.swing.JTextField tf9;
     // End of variables declaration//GEN-END:variables
-    private int meter_no;
+    private int meter_id;
 }
