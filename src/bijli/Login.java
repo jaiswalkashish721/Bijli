@@ -222,7 +222,7 @@ public class Login extends javax.swing.JFrame {
         String password = String.valueOf(pf1.getPassword());
         try
         {
-            Connection conn=DriverManager.getConnection("jdbc:postgresql://localhost:5432/bijli","yash","qazwsx1234");
+            Connection conn=ConnectionProvider.getConnection();
             Statement stmt=conn.createStatement();
             String query="select * from login_details;";
             ResultSet rs=stmt.executeQuery(query);
@@ -268,7 +268,7 @@ public class Login extends javax.swing.JFrame {
         String pswd=String.valueOf(pf2.getPassword());
         try
         {
-            Connection conn=DriverManager.getConnection("jdbc:postgresql://localhost:5432/bijli","yash","qazwsx1234");
+            Connection conn=ConnectionProvider.getConnection();
             Statement stmt=conn.createStatement();
             String query="insert into customer_details values(default,'"+name+"','"+address+"','"+zipcode+"','"+email+"','"+phone_number+"','"+joining+"');";
             stmt.executeUpdate(query);
