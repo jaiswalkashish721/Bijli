@@ -277,8 +277,7 @@ public class Login extends javax.swing.JFrame {
             }
             JOptionPane.showMessageDialog(this, "User not found");
             tf1.setText("");
-            pf1.setText("");
-            
+            pf1.setText("");        
         }
         catch(Exception e)
                 {
