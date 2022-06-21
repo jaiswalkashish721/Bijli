@@ -462,7 +462,57 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        
+        String query;
+        try{
+            String name=tf10.getText();
+            String address=tf11.getText();
+            String zipcode=tf12.getText();
+            String email=tf13.getText();
+            String phone=tf14.getText();
+            
+            Connection conn=ConnectionProvider.getConnection();
+            Statement stmt=conn.createStatement();
+            if(!(name.equals("") && address.equals("") && zipcode.equals("") && email.equals("") && phone.equals("")))
+            {
+            if(name.equals("") == false)
+            {
+                query="UPDATE customer_details SET name='"+name+"' WHERE meter_id="+meter_id+";";
+                stmt.executeUpdate(query);
+            }
+            if(address.equals("") == false)
+            {
+                query="UPDATE customer_details SET address='"+address+"' WHERE meter_id="+meter_id+";";
+                stmt.executeUpdate(query);
+            }
+            if(zipcode.equals("") == false)
+            {
+                query="UPDATE customer_details SET zipcode='"+zipcode+"' WHERE meter_id="+meter_id+";";
+                stmt.executeUpdate(query);
+            }
+            if(email.equals("") == false)
+            {
+                query="UPDATE customer_details SET email_id='"+email+"' WHERE meter_id="+meter_id+";";
+                stmt.executeUpdate(query);
+            }
+            if(phone.equals("") == false)
+            {
+                query="UPDATE customer_details SET phone_no='"+phone+"' WHERE meter_id="+meter_id+";";
+                stmt.executeUpdate(query);
+            }
+            tf10.setText("");
+            tf11.setText("");
+            tf12.setText("");
+            tf13.setText("");
+            tf14.setText("");
+            JOptionPane.showMessageDialog(this,"Updated your details successfully");
+            jframe_updatedetails.dispose();
+            }
+            else
+                JOptionPane.showMessageDialog(this,"Enter at least one field to be updated");
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this,e.getMessage());
+        }
     }//GEN-LAST:event_jButton12ActionPerformed
 
     public static void main(String args[]) {
