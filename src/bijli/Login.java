@@ -190,6 +190,7 @@ public class Login extends javax.swing.JFrame {
         jframe_adminhome.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_adminhome.getContentPane().setLayout(null);
 
+        jframe_updatedetails.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_updatedetails.setTitle("UPDATE DETAILS");
         jframe_updatedetails.getContentPane().setLayout(null);
 
@@ -230,7 +231,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_updatedetails.getContentPane().add(jButton11);
-        jButton11.setBounds(30, 370, 100, 50);
+        jButton11.setBounds(350, 370, 100, 50);
 
         jButton12.setText("UPDATE DETAILS");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -248,7 +249,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_updatedetails.getContentPane().add(jButton13);
-        jButton13.setBounds(350, 370, 110, 50);
+        jButton13.setBounds(30, 370, 110, 50);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
