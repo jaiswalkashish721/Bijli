@@ -38,9 +38,24 @@ public class Login extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jframe_showcustomerdetails = new javax.swing.JFrame();
         jframe_paymentstatus = new javax.swing.JFrame();
         jframe_adminhome = new javax.swing.JFrame();
+        jframe_updatedetails = new javax.swing.JFrame();
+        jLabel11 = new javax.swing.JLabel();
+        tf10 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        tf11 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        tf12 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        tf13 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        tf14 = new javax.swing.JTextField();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         tf1 = new javax.swing.JTextField();
@@ -157,6 +172,15 @@ public class Login extends javax.swing.JFrame {
         jframe_home.getContentPane().add(jButton9);
         jButton9.setBounds(90, 460, 150, 50);
 
+        jButton10.setText("Update details");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jframe_home.getContentPane().add(jButton10);
+        jButton10.setBounds(60, 210, 200, 60);
+
         jframe_showcustomerdetails.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_showcustomerdetails.getContentPane().setLayout(null);
 
@@ -166,7 +190,67 @@ public class Login extends javax.swing.JFrame {
         jframe_adminhome.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_adminhome.getContentPane().setLayout(null);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jframe_updatedetails.setTitle("UPDATE DETAILS");
+        jframe_updatedetails.getContentPane().setLayout(null);
+
+        jLabel11.setText("Name");
+        jframe_updatedetails.getContentPane().add(jLabel11);
+        jLabel11.setBounds(60, 50, 70, 18);
+        jframe_updatedetails.getContentPane().add(tf10);
+        tf10.setBounds(170, 50, 260, 24);
+
+        jLabel12.setText("Address");
+        jframe_updatedetails.getContentPane().add(jLabel12);
+        jLabel12.setBounds(60, 110, 80, 18);
+        jframe_updatedetails.getContentPane().add(tf11);
+        tf11.setBounds(170, 110, 260, 24);
+
+        jLabel13.setText("Zipcode");
+        jframe_updatedetails.getContentPane().add(jLabel13);
+        jLabel13.setBounds(60, 170, 80, 18);
+        jframe_updatedetails.getContentPane().add(tf12);
+        tf12.setBounds(170, 170, 260, 24);
+
+        jLabel14.setText("email");
+        jframe_updatedetails.getContentPane().add(jLabel14);
+        jLabel14.setBounds(60, 230, 60, 18);
+        jframe_updatedetails.getContentPane().add(tf13);
+        tf13.setBounds(170, 230, 260, 24);
+
+        jLabel15.setText("Phone no.");
+        jframe_updatedetails.getContentPane().add(jLabel15);
+        jLabel15.setBounds(50, 290, 90, 18);
+        jframe_updatedetails.getContentPane().add(tf14);
+        tf14.setBounds(170, 290, 260, 24);
+
+        jButton11.setText("CLEAR");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jframe_updatedetails.getContentPane().add(jButton11);
+        jButton11.setBounds(30, 370, 100, 50);
+
+        jButton12.setText("UPDATE DETAILS");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jframe_updatedetails.getContentPane().add(jButton12);
+        jButton12.setBounds(150, 370, 190, 50);
+
+        jButton13.setText("BACK");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        jframe_updatedetails.getContentPane().add(jButton13);
+        jButton13.setBounds(350, 370, 110, 50);
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -357,12 +441,40 @@ public class Login extends javax.swing.JFrame {
         new Login().setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        jframe_updatedetails.getContentPane().setBackground(new java.awt.Color(211,211,211));
+        jframe_updatedetails.setSize(500,500);
+        jframe_updatedetails.setLocationRelativeTo(null);
+        jframe_updatedetails.setVisible(true);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        jframe_updatedetails.dispose();
+        jframe_home.setVisible(true);
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        tf10.setText("");
+        tf11.setText("");
+        tf12.setText("");
+        tf13.setText("");
+        tf14.setText("");
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        
+    }//GEN-LAST:event_jButton12ActionPerformed
+
     public static void main(String args[]) {
 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -373,6 +485,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -386,9 +503,15 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JFrame jframe_paymentstatus;
     private javax.swing.JFrame jframe_showcustomerdetails;
     private javax.swing.JFrame jframe_signup;
+    private javax.swing.JFrame jframe_updatedetails;
     private javax.swing.JPasswordField pf1;
     private javax.swing.JPasswordField pf2;
     private javax.swing.JTextField tf1;
+    private javax.swing.JTextField tf10;
+    private javax.swing.JTextField tf11;
+    private javax.swing.JTextField tf12;
+    private javax.swing.JTextField tf13;
+    private javax.swing.JTextField tf14;
     private javax.swing.JTextField tf4;
     private javax.swing.JTextField tf5;
     private javax.swing.JTextField tf6;
