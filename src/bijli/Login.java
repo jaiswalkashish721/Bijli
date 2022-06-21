@@ -55,6 +55,7 @@ public class Login extends javax.swing.JFrame {
         ctf6 = new javax.swing.JTextField();
         ctf7 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
+        clear = new javax.swing.JButton();
         jframe_paymentstatus = new javax.swing.JFrame();
         jframe_adminhome = new javax.swing.JFrame();
         jLabel2 = new javax.swing.JLabel();
@@ -174,85 +175,106 @@ public class Login extends javax.swing.JFrame {
         jButton9.setBounds(90, 460, 150, 50);
 
         jframe_showcustomerdetails.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jframe_showcustomerdetails.setTitle("CUSTOMER DETAILS");
         jframe_showcustomerdetails.getContentPane().setLayout(null);
 
-        jButton11.setText("Show Customer Details");
+        jButton11.setText("SHOW DETAILS");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
             }
         });
         jframe_showcustomerdetails.getContentPane().add(jButton11);
-        jButton11.setBounds(220, 380, 150, 40);
+        jButton11.setBounds(170, 350, 170, 50);
 
         jLabel11.setText("Meter ID");
         jframe_showcustomerdetails.getContentPane().add(jLabel11);
-        jLabel11.setBounds(20, 40, 60, 16);
+        jLabel11.setBounds(50, 40, 60, 16);
 
         jLabel12.setText("Customer Name");
         jframe_showcustomerdetails.getContentPane().add(jLabel12);
-        jLabel12.setBounds(20, 80, 100, 16);
+        jLabel12.setBounds(50, 80, 100, 16);
 
         jLabel13.setText("Address");
         jframe_showcustomerdetails.getContentPane().add(jLabel13);
-        jLabel13.setBounds(20, 120, 70, 16);
+        jLabel13.setBounds(50, 120, 70, 16);
 
         jLabel14.setText("Zipcode");
         jframe_showcustomerdetails.getContentPane().add(jLabel14);
-        jLabel14.setBounds(20, 160, 60, 16);
+        jLabel14.setBounds(50, 160, 60, 16);
 
         jLabel15.setText("Email ID");
         jframe_showcustomerdetails.getContentPane().add(jLabel15);
-        jLabel15.setBounds(20, 200, 50, 16);
+        jLabel15.setBounds(50, 200, 50, 16);
 
         jLabel16.setText("Phone Number");
         jframe_showcustomerdetails.getContentPane().add(jLabel16);
-        jLabel16.setBounds(20, 240, 100, 16);
+        jLabel16.setBounds(50, 240, 100, 16);
 
         jLabel17.setText("Joining Date");
         jframe_showcustomerdetails.getContentPane().add(jLabel17);
-        jLabel17.setBounds(20, 280, 80, 16);
-        jframe_showcustomerdetails.getContentPane().add(ctf1);
-        ctf1.setBounds(180, 40, 220, 22);
+        jLabel17.setBounds(50, 280, 80, 16);
 
+        ctf1.setEditable(false);
+        jframe_showcustomerdetails.getContentPane().add(ctf1);
+        ctf1.setBounds(210, 40, 220, 22);
+
+        ctf2.setEditable(false);
         ctf2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ctf2ActionPerformed(evt);
             }
         });
         jframe_showcustomerdetails.getContentPane().add(ctf2);
-        ctf2.setBounds(180, 80, 220, 22);
+        ctf2.setBounds(210, 80, 220, 22);
 
+        ctf3.setEditable(false);
         ctf3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ctf3ActionPerformed(evt);
             }
         });
         jframe_showcustomerdetails.getContentPane().add(ctf3);
-        ctf3.setBounds(180, 120, 220, 22);
-        jframe_showcustomerdetails.getContentPane().add(ctf4);
-        ctf4.setBounds(180, 160, 220, 22);
-        jframe_showcustomerdetails.getContentPane().add(ctf5);
-        ctf5.setBounds(180, 200, 220, 22);
+        ctf3.setBounds(210, 120, 220, 22);
 
+        ctf4.setEditable(false);
+        jframe_showcustomerdetails.getContentPane().add(ctf4);
+        ctf4.setBounds(210, 160, 220, 22);
+
+        ctf5.setEditable(false);
+        jframe_showcustomerdetails.getContentPane().add(ctf5);
+        ctf5.setBounds(210, 200, 220, 22);
+
+        ctf6.setEditable(false);
         ctf6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ctf6ActionPerformed(evt);
             }
         });
         jframe_showcustomerdetails.getContentPane().add(ctf6);
-        ctf6.setBounds(180, 240, 220, 22);
-        jframe_showcustomerdetails.getContentPane().add(ctf7);
-        ctf7.setBounds(180, 280, 220, 22);
+        ctf6.setBounds(210, 240, 220, 22);
 
-        jButton10.setText("Go to Home");
+        ctf7.setEditable(false);
+        jframe_showcustomerdetails.getContentPane().add(ctf7);
+        ctf7.setBounds(210, 280, 220, 22);
+
+        jButton10.setText("BACK");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
             }
         });
         jframe_showcustomerdetails.getContentPane().add(jButton10);
-        jButton10.setBounds(25, 382, 120, 40);
+        jButton10.setBounds(20, 350, 120, 50);
+
+        clear.setText("CLEAR");
+        clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearActionPerformed(evt);
+            }
+        });
+        jframe_showcustomerdetails.getContentPane().add(clear);
+        clear.setBounds(370, 350, 100, 50);
 
         jframe_paymentstatus.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_paymentstatus.getContentPane().setLayout(null);
@@ -438,7 +460,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         jframe_showcustomerdetails.getContentPane().setBackground(new java.awt.Color(211,211,211));
-        jframe_showcustomerdetails.setSize(500,600);
+        jframe_showcustomerdetails.setSize(500,500);
         jframe_showcustomerdetails.setLocationRelativeTo(null);
         jframe_showcustomerdetails.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -491,15 +513,27 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_ctf6ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        jframe_showcustomerdetails.dispose();
         jframe_home.setVisible(true);
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
+        ctf1.setText("");
+        ctf2.setText("");
+        ctf3.setText("");
+        ctf4.setText("");
+        ctf5.setText("");
+        ctf6.setText("");
+        ctf7.setText("");
+        
+    }//GEN-LAST:event_clearActionPerformed
 
     public static void main(String args[]) {
 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton clear;
     private javax.swing.JTextField ctf1;
     private javax.swing.JTextField ctf2;
     private javax.swing.JTextField ctf3;
