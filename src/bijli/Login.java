@@ -448,7 +448,7 @@ public class Login extends javax.swing.JFrame {
         }
         try                                                                     // Handle Exception for converting string to int using parseInt
         {
-        meter_id=Integer.parseInt((tf1.getText()).trim());
+            meter_id=Integer.parseInt((tf1.getText()).trim());
         }
         catch(NumberFormatException e)
         {
