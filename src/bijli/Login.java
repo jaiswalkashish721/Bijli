@@ -285,7 +285,7 @@ public class Login extends javax.swing.JFrame {
         jButton14.setText("BACK");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                jButton14ActionPerformed(evt);
             }
         });
         jframe_showcustomerdetails.getContentPane().add(jButton14);
@@ -343,7 +343,7 @@ public class Login extends javax.swing.JFrame {
         jButton15.setText("CLEAR");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                jButton15ActionPerformed(evt);
             }
         });
         jframe_updatedetails.getContentPane().add(jButton15);
@@ -573,7 +573,7 @@ public class Login extends javax.swing.JFrame {
         jframe_home.setVisible(true);
     }//GEN-LAST:event_jButton13ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         tf10.setText("");
         tf11.setText("");
         tf12.setText("");
@@ -670,7 +670,7 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ctf6ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         jframe_showcustomerdetails.dispose();
         jframe_home.setVisible(true);
     }//GEN-LAST:event_jButton10ActionPerformed
