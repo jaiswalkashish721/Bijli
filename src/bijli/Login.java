@@ -457,7 +457,7 @@ public class Login extends javax.swing.JFrame {
             pf1.setText("");
             return;
         }
-        try                                                                     // Check for Login authentication
+        try                                                                     // Login authentication
         {
             Connection conn=ConnectionProvider.getConnection();
             Statement stmt=conn.createStatement();
