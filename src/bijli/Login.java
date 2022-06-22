@@ -561,7 +561,6 @@ public class Login extends javax.swing.JFrame {
         new Login().setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
-<<<<<<< HEAD
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         jframe_updatedetails.getContentPane().setBackground(new java.awt.Color(211,211,211));
         jframe_updatedetails.setSize(500,500);
@@ -635,7 +634,6 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,e.getMessage());
         }
     }//GEN-LAST:event_jButton12ActionPerformed
-=======
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
         try{
@@ -687,7 +685,6 @@ public class Login extends javax.swing.JFrame {
         ctf7.setText("");
         
     }//GEN-LAST:event_clearActionPerformed
->>>>>>> customer_details
 
     public static void main(String args[]) {
 
