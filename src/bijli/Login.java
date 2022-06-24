@@ -59,6 +59,9 @@ public class Login extends javax.swing.JFrame {
         clear = new javax.swing.JButton();
         jframe_paymentstatus = new javax.swing.JFrame();
         jframe_adminhome = new javax.swing.JFrame();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
         jframe_updatedetails = new javax.swing.JFrame();
         jLabel18 = new javax.swing.JLabel();
         tf10 = new javax.swing.JTextField();
@@ -73,6 +76,15 @@ public class Login extends javax.swing.JFrame {
         jButton15 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
+        jframe_deletecustomer = new javax.swing.JFrame();
+        jButton19 = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
+        tf_deletecustomermeterid = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        tf_deletecustomername = new javax.swing.JTextField();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         tf1 = new javax.swing.JTextField();
@@ -285,7 +297,7 @@ public class Login extends javax.swing.JFrame {
         jButton14.setText("BACK");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                jButton10ActionPerformed(evt);
             }
         });
         jframe_showcustomerdetails.getContentPane().add(jButton14);
@@ -303,8 +315,31 @@ public class Login extends javax.swing.JFrame {
         jframe_paymentstatus.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_paymentstatus.getContentPane().setLayout(null);
 
-        jframe_adminhome.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jframe_adminhome.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jframe_adminhome.setTitle("ADMIN HOME");
         jframe_adminhome.getContentPane().setLayout(null);
+
+        jButton16.setText("UPDATE PAYMENT STATUS");
+        jframe_adminhome.getContentPane().add(jButton16);
+        jButton16.setBounds(90, 70, 240, 24);
+
+        jButton17.setText("DELETE CUSTOMER RECORD");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+        jframe_adminhome.getContentPane().add(jButton17);
+        jButton17.setBounds(90, 120, 260, 24);
+
+        jButton18.setText("LOGOUT");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+        jframe_adminhome.getContentPane().add(jButton18);
+        jButton18.setBounds(150, 340, 130, 24);
 
         jframe_updatedetails.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_updatedetails.setTitle("UPDATE DETAILS");
@@ -343,7 +378,7 @@ public class Login extends javax.swing.JFrame {
         jButton15.setText("CLEAR");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                jButton11ActionPerformed(evt);
             }
         });
         jframe_updatedetails.getContentPane().add(jButton15);
@@ -366,6 +401,56 @@ public class Login extends javax.swing.JFrame {
         });
         jframe_updatedetails.getContentPane().add(jButton13);
         jButton13.setBounds(30, 370, 110, 50);
+
+        jframe_deletecustomer.getContentPane().setLayout(null);
+
+        jButton19.setText("DISPLAY");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        jframe_deletecustomer.getContentPane().add(jButton19);
+        jButton19.setBounds(160, 100, 150, 30);
+
+        jLabel23.setText("Meter id");
+        jframe_deletecustomer.getContentPane().add(jLabel23);
+        jLabel23.setBounds(80, 40, 70, 30);
+        jframe_deletecustomer.getContentPane().add(tf_deletecustomermeterid);
+        tf_deletecustomermeterid.setBounds(200, 40, 220, 24);
+
+        jLabel24.setText("Name");
+        jframe_deletecustomer.getContentPane().add(jLabel24);
+        jLabel24.setBounds(80, 170, 70, 20);
+        jframe_deletecustomer.getContentPane().add(tf_deletecustomername);
+        tf_deletecustomername.setBounds(200, 170, 220, 24);
+
+        jButton20.setText("DELETE RECORD");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+        jframe_deletecustomer.getContentPane().add(jButton20);
+        jButton20.setBounds(150, 230, 190, 40);
+
+        jButton21.setText("CLEAR");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+        jframe_deletecustomer.getContentPane().add(jButton21);
+        jButton21.setBounds(360, 230, 100, 40);
+
+        jButton22.setText("BACK");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+        jframe_deletecustomer.getContentPane().add(jButton22);
+        jButton22.setBounds(20, 230, 110, 40);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
@@ -416,6 +501,11 @@ public class Login extends javax.swing.JFrame {
         jButton3.setText("ADMIN LOGIN");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
         jButton3.setBounds(370, 210, 140, 50);
 
@@ -686,6 +776,75 @@ public class Login extends javax.swing.JFrame {
         
     }//GEN-LAST:event_clearActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if(tf1.getText().equals("admin") && String.valueOf(pf1.getPassword()).equals("admin"))           
+            {
+                JOptionPane.showMessageDialog(this, "Logged in succesffully as admin");
+                dispose();
+                jframe_adminhome.getContentPane().setBackground(new java.awt.Color(211,211,211));
+                jframe_adminhome.setSize(500, 500);
+                jframe_adminhome.setLocationRelativeTo(null);
+                jframe_adminhome.setVisible(true);
+            }
+        else
+            JOptionPane.showMessageDialog(this, "Invalid credentials");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        jframe_deletecustomer.getContentPane().setBackground(new java.awt.Color(211,211,211));
+        jframe_deletecustomer.setSize(500,350);
+        jframe_deletecustomer.setLocationRelativeTo(null);
+        jframe_deletecustomer.setVisible(true);
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        jframe_deletecustomer.dispose();
+        jframe_adminhome.setVisible(true);
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        tf_deletecustomermeterid.setText("");
+        tf_deletecustomername.setText("");
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        jframe_adminhome.dispose();
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        try
+        {
+            Connection conn=ConnectionProvider.getConnection();
+            Statement stmt=conn.createStatement();
+            ResultSet rs=stmt.executeQuery("select name from customer_details where meter_id="+tf_deletecustomermeterid.getText()+";");
+            if(rs.next())
+                tf_deletecustomername.setText(rs.getString(1));
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(this,e.getMessage());
+        }
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        try
+        {
+            Connection conn=ConnectionProvider.getConnection();
+            Statement stmt=conn.createStatement();
+            stmt.executeUpdate("DELETE FROM customer_details WHERE meter_id="+tf_deletecustomermeterid.getText()+";");
+            tf_deletecustomermeterid.setText("");
+            tf_deletecustomername.setText("");
+            JOptionPane.showMessageDialog(this,"Record Deleted successfully");
+            jframe_deletecustomer.dispose();
+            jframe_adminhome.setVisible(true);
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(this,e.getMessage());
+        }
+    }//GEN-LAST:event_jButton20ActionPerformed
+
     public static void main(String args[]) {
 
     }
@@ -706,7 +865,14 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -729,6 +895,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -737,6 +905,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JFrame jframe_adminhome;
+    private javax.swing.JFrame jframe_deletecustomer;
     private javax.swing.JFrame jframe_home;
     private javax.swing.JFrame jframe_paymentstatus;
     private javax.swing.JFrame jframe_showcustomerdetails;
@@ -756,6 +925,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField tf7;
     private javax.swing.JTextField tf8;
     private javax.swing.JTextField tf9;
+    private javax.swing.JTextField tf_deletecustomermeterid;
+    private javax.swing.JTextField tf_deletecustomername;
     // End of variables declaration//GEN-END:variables
     private int meter_id;
 }
