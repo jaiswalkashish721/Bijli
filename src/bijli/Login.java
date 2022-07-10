@@ -57,7 +57,6 @@ public class Login extends javax.swing.JFrame {
         ctf7 = new javax.swing.JTextField();
         jButton14 = new javax.swing.JButton();
         clear = new javax.swing.JButton();
-        jframe_paymentstatus = new javax.swing.JFrame();
         jframe_adminhome = new javax.swing.JFrame();
         jButton16 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
@@ -100,6 +99,20 @@ public class Login extends javax.swing.JFrame {
         jButton24 = new javax.swing.JButton();
         jButton25 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
+        jframe_monthlypayment = new javax.swing.JFrame();
+        jLabel30 = new javax.swing.JLabel();
+        monthtf = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        yeartf = new javax.swing.JTextField();
+        jButton27 = new javax.swing.JButton();
+        jLabel32 = new javax.swing.JLabel();
+        unittf = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        billtf = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        statustf = new javax.swing.JTextField();
+        jButton28 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         tf1 = new javax.swing.JTextField();
@@ -196,7 +209,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_home.getContentPane().add(jButton7);
-        jButton7.setBounds(60, 60, 200, 50);
+        jButton7.setBounds(90, 20, 220, 60);
 
         jButton8.setText("Monthly payment status");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -205,7 +218,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_home.getContentPane().add(jButton8);
-        jButton8.setBounds(60, 130, 210, 60);
+        jButton8.setBounds(90, 100, 220, 70);
 
         jButton9.setText("Log out");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -214,7 +227,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_home.getContentPane().add(jButton9);
-        jButton9.setBounds(90, 460, 150, 50);
+        jButton9.setBounds(130, 290, 150, 50);
 
         jButton10.setText("Update details");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -223,7 +236,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_home.getContentPane().add(jButton10);
-        jButton10.setBounds(60, 210, 200, 60);
+        jButton10.setBounds(90, 200, 220, 60);
 
         jframe_showcustomerdetails.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_showcustomerdetails.setTitle("CUSTOMER DETAILS");
@@ -327,9 +340,6 @@ public class Login extends javax.swing.JFrame {
         jframe_showcustomerdetails.getContentPane().add(clear);
         clear.setBounds(370, 350, 100, 50);
 
-        jframe_paymentstatus.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        jframe_paymentstatus.getContentPane().setLayout(null);
-
         jframe_adminhome.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         jframe_adminhome.setTitle("ADMIN HOME");
         jframe_adminhome.getContentPane().setLayout(null);
@@ -341,7 +351,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_adminhome.getContentPane().add(jButton16);
-        jButton16.setBounds(70, 30, 250, 50);
+        jButton16.setBounds(70, 20, 250, 70);
 
         jButton17.setText("DELETE CUSTOMER RECORD");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -350,7 +360,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_adminhome.getContentPane().add(jButton17);
-        jButton17.setBounds(70, 110, 250, 50);
+        jButton17.setBounds(70, 110, 250, 60);
 
         jButton18.setText("LOGOUT");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
@@ -359,7 +369,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_adminhome.getContentPane().add(jButton18);
-        jButton18.setBounds(120, 300, 140, 40);
+        jButton18.setBounds(120, 200, 140, 40);
 
         jframe_updatedetails.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_updatedetails.setTitle("UPDATE DETAILS");
@@ -422,6 +432,8 @@ public class Login extends javax.swing.JFrame {
         jframe_updatedetails.getContentPane().add(jButton13);
         jButton13.setBounds(30, 370, 110, 50);
 
+        jframe_deletecustomer.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jframe_deletecustomer.setTitle("DELETE RECORD");
         jframe_deletecustomer.getContentPane().setLayout(null);
 
         jButton19.setText("DISPLAY");
@@ -555,6 +567,73 @@ public class Login extends javax.swing.JFrame {
         jframe_updatepaymentdetails.getContentPane().add(jButton26);
         jButton26.setBounds(40, 380, 120, 40);
 
+        jframe_monthlypayment.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jframe_monthlypayment.setTitle("PAYMENT STATUS");
+        jframe_monthlypayment.getContentPane().setLayout(null);
+
+        jLabel30.setText("Month");
+        jframe_monthlypayment.getContentPane().add(jLabel30);
+        jLabel30.setBounds(50, 40, 60, 20);
+        jframe_monthlypayment.getContentPane().add(monthtf);
+        monthtf.setBounds(130, 40, 100, 24);
+
+        jLabel31.setText("Year");
+        jframe_monthlypayment.getContentPane().add(jLabel31);
+        jLabel31.setBounds(270, 40, 60, 20);
+        jframe_monthlypayment.getContentPane().add(yeartf);
+        yeartf.setBounds(320, 40, 130, 24);
+
+        jButton27.setText("DISPLAY");
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
+        jframe_monthlypayment.getContentPane().add(jButton27);
+        jButton27.setBounds(180, 90, 150, 40);
+
+        jLabel32.setText("Units");
+        jframe_monthlypayment.getContentPane().add(jLabel32);
+        jLabel32.setBounds(70, 170, 60, 18);
+
+        unittf.setEditable(false);
+        jframe_monthlypayment.getContentPane().add(unittf);
+        unittf.setBounds(150, 170, 100, 24);
+
+        jLabel33.setText("Bill");
+        jframe_monthlypayment.getContentPane().add(jLabel33);
+        jLabel33.setBounds(270, 170, 54, 18);
+
+        billtf.setEditable(false);
+        jframe_monthlypayment.getContentPane().add(billtf);
+        billtf.setBounds(330, 170, 120, 24);
+
+        jLabel34.setText("Status");
+        jframe_monthlypayment.getContentPane().add(jLabel34);
+        jLabel34.setBounds(190, 220, 70, 18);
+
+        statustf.setEditable(false);
+        jframe_monthlypayment.getContentPane().add(statustf);
+        statustf.setBounds(270, 220, 110, 24);
+
+        jButton28.setText("BACK");
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton28ActionPerformed(evt);
+            }
+        });
+        jframe_monthlypayment.getContentPane().add(jButton28);
+        jButton28.setBounds(90, 290, 140, 40);
+
+        jButton29.setText("CLEAR");
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
+        jframe_monthlypayment.getContentPane().add(jButton29);
+        jButton29.setBounds(270, 290, 140, 40);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -663,7 +742,7 @@ public class Login extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(this, "Logged in succesffully");
                     dispose();
                     jframe_home.getContentPane().setBackground(new java.awt.Color(211,211,211));
-                    jframe_home.setSize(400,600);
+                    jframe_home.setSize(400,400);
                     jframe_home.setLocationRelativeTo(null);
                     jframe_home.setVisible(true);
                     return;
@@ -744,7 +823,10 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        jframe_paymentstatus.setVisible(true);
+        jframe_monthlypayment.getContentPane().setBackground(new java.awt.Color(211,211,211));
+        jframe_monthlypayment.setSize(500,400);
+        jframe_monthlypayment.setLocationRelativeTo(null);
+        jframe_monthlypayment.setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -885,7 +967,7 @@ public class Login extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Logged in succesffully as admin");
                 dispose();
                 jframe_adminhome.getContentPane().setBackground(new java.awt.Color(211,211,211));
-                jframe_adminhome.setSize(400, 400);
+                jframe_adminhome.setSize(400, 300);
                 jframe_adminhome.setLocationRelativeTo(null);
                 jframe_adminhome.setVisible(true);
             }
@@ -1020,11 +1102,49 @@ public class Login extends javax.swing.JFrame {
         jframe_adminhome.setVisible(true);
     }//GEN-LAST:event_jButton26ActionPerformed
 
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        try{
+            String status;
+            Connection conn=ConnectionProvider.getConnection();
+            Statement stmt=conn.createStatement();
+            String query="select * from payment_details where meter_id="+meter_id+"AND year="+yeartf.getText()+"AND month_number="+monthtf.getText()+";";
+            ResultSet rs=stmt.executeQuery(query);
+            if(rs.next())
+            {
+                unittf.setText(""+rs.getInt(4));
+                billtf.setText(""+rs.getFloat(5));
+                if(rs.getInt(6)==0)
+                    status="Not paid";
+                else
+                    status="paid";
+                statustf.setText(status);
+            }
+     }
+     catch(Exception e)
+     {
+         JOptionPane.showMessageDialog(this,e.getMessage());
+     }
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+        jframe_monthlypayment.dispose();
+        jframe_home.setVisible(true);
+    }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        monthtf.setText("");
+        yeartf.setText("");
+        unittf.setText("");
+        billtf.setText("");
+        statustf.setText("");
+    }//GEN-LAST:event_jButton29ActionPerformed
+
     public static void main(String args[]) {
 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField billtf;
     private javax.swing.JButton clear;
     private javax.swing.JTextField ctf1;
     private javax.swing.JTextField ctf2;
@@ -1052,6 +1172,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1082,6 +1205,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1091,13 +1219,15 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JFrame jframe_adminhome;
     private javax.swing.JFrame jframe_deletecustomer;
     private javax.swing.JFrame jframe_home;
-    private javax.swing.JFrame jframe_paymentstatus;
+    private javax.swing.JFrame jframe_monthlypayment;
     private javax.swing.JFrame jframe_showcustomerdetails;
     private javax.swing.JFrame jframe_signup;
     private javax.swing.JFrame jframe_updatedetails;
     private javax.swing.JFrame jframe_updatepaymentdetails;
+    private javax.swing.JTextField monthtf;
     private javax.swing.JPasswordField pf1;
     private javax.swing.JPasswordField pf2;
+    private javax.swing.JTextField statustf;
     private javax.swing.JTextField tf1;
     private javax.swing.JTextField tf10;
     private javax.swing.JTextField tf11;
@@ -1117,6 +1247,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField tf_jframeupdatepaymentdetails_name;
     private javax.swing.JTextField tf_jframeupdatepaymentdetails_units;
     private javax.swing.JTextField tf_jframeupdatepaymentdetails_year;
+    private javax.swing.JTextField unittf;
+    private javax.swing.JTextField yeartf;
     // End of variables declaration//GEN-END:variables
     private int meter_id;
 }
