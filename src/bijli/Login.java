@@ -59,18 +59,18 @@ public class Login extends javax.swing.JFrame {
         clear = new javax.swing.JButton();
         jframe_paymentstatus = new javax.swing.JFrame();
         jLabel23 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        monthtf = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        yeartf = new javax.swing.JTextField();
         jButton16 = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        unittf = new javax.swing.JTextField();
+        billtf = new javax.swing.JTextField();
+        statustf = new javax.swing.JTextField();
         jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
+        clearbutton = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jframe_adminhome = new javax.swing.JFrame();
@@ -322,60 +322,86 @@ public class Login extends javax.swing.JFrame {
 
         jLabel23.setText("Month");
         jframe_paymentstatus.getContentPane().add(jLabel23);
-        jLabel23.setBounds(50, 30, 50, 16);
-        jframe_paymentstatus.getContentPane().add(jTextField1);
-        jTextField1.setBounds(140, 30, 110, 22);
+        jLabel23.setBounds(50, 30, 60, 16);
+
+        monthtf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                monthtfActionPerformed(evt);
+            }
+        });
+        jframe_paymentstatus.getContentPane().add(monthtf);
+        monthtf.setBounds(140, 30, 110, 22);
 
         jLabel24.setText("Year");
         jframe_paymentstatus.getContentPane().add(jLabel24);
-        jLabel24.setBounds(370, 30, 30, 16);
-        jframe_paymentstatus.getContentPane().add(jTextField2);
-        jTextField2.setBounds(460, 30, 90, 22);
+        jLabel24.setBounds(370, 30, 60, 16);
+        jframe_paymentstatus.getContentPane().add(yeartf);
+        yeartf.setBounds(460, 30, 90, 22);
 
         jButton16.setText("DISPLAY");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
         jframe_paymentstatus.getContentPane().add(jButton16);
-        jButton16.setBounds(280, 80, 81, 22);
+        jButton16.setBounds(280, 80, 90, 22);
 
         jLabel25.setText("Units");
         jframe_paymentstatus.getContentPane().add(jLabel25);
-        jLabel25.setBounds(50, 170, 27, 16);
+        jLabel25.setBounds(50, 170, 40, 16);
 
         jLabel26.setText("Bill");
         jframe_paymentstatus.getContentPane().add(jLabel26);
-        jLabel26.setBounds(370, 170, 16, 16);
+        jLabel26.setBounds(370, 170, 70, 16);
 
         jLabel27.setText("Status");
         jframe_paymentstatus.getContentPane().add(jLabel27);
-        jLabel27.setBounds(210, 250, 32, 16);
+        jLabel27.setBounds(210, 250, 50, 16);
 
-        jTextField3.setEditable(false);
-        jframe_paymentstatus.getContentPane().add(jTextField3);
-        jTextField3.setBounds(140, 170, 64, 22);
-
-        jTextField4.setEditable(false);
-        jframe_paymentstatus.getContentPane().add(jTextField4);
-        jTextField4.setBounds(460, 170, 64, 22);
-
-        jTextField5.setEditable(false);
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        unittf.setEditable(false);
+        unittf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                unittfActionPerformed(evt);
             }
         });
-        jframe_paymentstatus.getContentPane().add(jTextField5);
-        jTextField5.setBounds(300, 250, 64, 22);
+        jframe_paymentstatus.getContentPane().add(unittf);
+        unittf.setBounds(140, 170, 64, 22);
+
+        billtf.setEditable(false);
+        jframe_paymentstatus.getContentPane().add(billtf);
+        billtf.setBounds(460, 170, 64, 22);
+
+        statustf.setEditable(false);
+        statustf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statustfActionPerformed(evt);
+            }
+        });
+        jframe_paymentstatus.getContentPane().add(statustf);
+        statustf.setBounds(300, 250, 64, 22);
 
         jButton17.setText("=>");
         jframe_paymentstatus.getContentPane().add(jButton17);
-        jButton17.setBounds(480, 310, 72, 22);
+        jButton17.setBounds(480, 310, 90, 22);
 
-        jButton18.setText("CLEAR");
-        jframe_paymentstatus.getContentPane().add(jButton18);
-        jButton18.setBounds(340, 310, 72, 22);
+        clearbutton.setText("CLEAR");
+        clearbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearbuttonActionPerformed(evt);
+            }
+        });
+        jframe_paymentstatus.getContentPane().add(clearbutton);
+        clearbutton.setBounds(340, 310, 90, 22);
 
         jButton19.setText("BACK");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
         jframe_paymentstatus.getContentPane().add(jButton19);
-        jButton19.setBounds(200, 310, 72, 22);
+        jButton19.setBounds(182, 310, 90, 22);
 
         jButton20.setText("<=");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -384,7 +410,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jframe_paymentstatus.getContentPane().add(jButton20);
-        jButton20.setBounds(60, 310, 72, 22);
+        jButton20.setBounds(52, 310, 80, 22);
 
         jframe_adminhome.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jframe_adminhome.getContentPane().setLayout(null);
@@ -769,20 +795,64 @@ public class Login extends javax.swing.JFrame {
         
     }//GEN-LAST:event_clearActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void statustfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statustfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_statustfActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void clearbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearbuttonActionPerformed
+        monthtf.setText("");
+        yeartf.setText("");
+        unittf.setText("");
+        billtf.setText("");
+        statustf.setText("");
+        
+        
+    }//GEN-LAST:event_clearbuttonActionPerformed
+
+    private void unittfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unittfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_unittfActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        jframe_paymentstatus.dispose();
+         jframe_home.setVisible(true);
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void monthtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_monthtfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_monthtfActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+     try{
+        Connection conn=ConnectionProvider.getConnection();
+            Statement stmt=conn.createStatement();
+            String query="select * from payment_details where meter_id="+meter_id+"AND year="+yeartf.getText()+"AND month_number="+monthtf.getText()+";";
+            ResultSet rs=stmt.executeQuery(query);
+            rs.next(); 
+            
+            unittf.setText(""+rs.getInt(4));
+            billtf.setText(""+rs.getFloat(5));
+            statustf.setText(""+rs.getInt(6));
+            
+     }
+     catch(Exception e)
+     {
+         JOptionPane.showMessageDialog(this,e.getMessage());
+     }
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     public static void main(String args[]) {
 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField billtf;
     private javax.swing.JButton clear;
+    private javax.swing.JButton clearbutton;
     private javax.swing.JTextField ctf1;
     private javax.swing.JTextField ctf2;
     private javax.swing.JTextField ctf3;
@@ -799,7 +869,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
@@ -837,19 +906,16 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JFrame jframe_adminhome;
     private javax.swing.JFrame jframe_home;
     private javax.swing.JFrame jframe_paymentstatus;
     private javax.swing.JFrame jframe_showcustomerdetails;
     private javax.swing.JFrame jframe_signup;
     private javax.swing.JFrame jframe_updatedetails;
+    private javax.swing.JTextField monthtf;
     private javax.swing.JPasswordField pf1;
     private javax.swing.JPasswordField pf2;
+    private javax.swing.JTextField statustf;
     private javax.swing.JTextField tf1;
     private javax.swing.JTextField tf10;
     private javax.swing.JTextField tf11;
@@ -862,6 +928,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField tf7;
     private javax.swing.JTextField tf8;
     private javax.swing.JTextField tf9;
+    private javax.swing.JTextField unittf;
+    private javax.swing.JTextField yeartf;
     // End of variables declaration//GEN-END:variables
     private int meter_id;
 }
