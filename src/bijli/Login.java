@@ -1072,10 +1072,26 @@ public class Login extends javax.swing.JFrame {
             int year=Integer.parseInt(tf_jframeupdatepaymentdetails_year.getText());
             int monthno=Integer.parseInt(tf_jframeupdatepaymentdetails_monthno.getText());
             int units=Integer.parseInt(tf_jframeupdatepaymentdetails_units.getText());
-            int totalbill=100;
+            float bill=0;
+            if(units<=100)
+            {
+              bill=0;
+            }
+            else if(units<=200)
+            {
+                bill=0+(3/2)*(units-100);    
+            }
+            else if(units<=400)
+            {
+                bill=0+(3/2)*100+(5/2)*(units-200);
+            }
+            else if(units>400)
+            {
+                bill=0+(3/2)*100+(5/2)*200+(7/2)*(units-400);
+            }
             Connection conn=ConnectionProvider.getConnection();
             Statement stmt=conn.createStatement();
-            stmt.executeUpdate("insert into payment_details values("+meterid+","+year+","+monthno+","+units+","+totalbill+",DEFAULT);");
+            stmt.executeUpdate("insert into payment_details values("+meterid+","+year+","+monthno+","+units+","+bill+",DEFAULT);");
             JOptionPane.showMessageDialog(this,"Details updated successfully");
             tf_jframeupdatepaymentdetails_meterid.setText("");
             tf_jframeupdatepaymentdetails_name.setText("");
