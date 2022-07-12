@@ -55,8 +55,8 @@ public class Login extends javax.swing.JFrame {
         ctf5 = new javax.swing.JTextField();
         ctf6 = new javax.swing.JTextField();
         ctf7 = new javax.swing.JTextField();
-        jButton14 = new javax.swing.JButton();
         clear = new javax.swing.JButton();
+        jButton30 = new javax.swing.JButton();
         jframe_adminhome = new javax.swing.JFrame();
         jButton16 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
@@ -322,15 +322,6 @@ public class Login extends javax.swing.JFrame {
         jframe_showcustomerdetails.getContentPane().add(ctf7);
         ctf7.setBounds(210, 280, 220, 24);
 
-        jButton14.setText("BACK");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-        jframe_showcustomerdetails.getContentPane().add(jButton14);
-        jButton14.setBounds(20, 350, 120, 50);
-
         clear.setText("CLEAR");
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -339,6 +330,15 @@ public class Login extends javax.swing.JFrame {
         });
         jframe_showcustomerdetails.getContentPane().add(clear);
         clear.setBounds(370, 350, 100, 50);
+
+        jButton30.setText("BACK");
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
+        jframe_showcustomerdetails.getContentPane().add(jButton30);
+        jButton30.setBounds(30, 350, 120, 50);
 
         jframe_adminhome.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         jframe_adminhome.setTitle("ADMIN HOME");
@@ -1073,21 +1073,21 @@ public class Login extends javax.swing.JFrame {
             int monthno=Integer.parseInt(tf_jframeupdatepaymentdetails_monthno.getText());
             int units=Integer.parseInt(tf_jframeupdatepaymentdetails_units.getText());
             float bill=0;
-            if(units<=100)
+            if(units>0)
             {
-              bill=0;
+                if(units<=100)
+                    bill=0;
+                else if(units<=200)
+                    bill=(float)((units-100)*1.5);
+                else if(units<=400)
+                    bill=(float)(150+(units-200)*2.5);
+                else
+                    bill=(float)(650+(units-400)*3.5);
             }
-            else if(units<=200)
+            else
             {
-                bill=0+(3/2)*(units-100);    
-            }
-            else if(units<=400)
-            {
-                bill=0+(3/2)*100+(5/2)*(units-200);
-            }
-            else if(units>400)
-            {
-                bill=0+(3/2)*100+(5/2)*200+(7/2)*(units-400);
+                JOptionPane.showMessageDialog(this,"Units cannot be negative");
+                return;
             }
             Connection conn=ConnectionProvider.getConnection();
             Statement stmt=conn.createStatement();
@@ -1155,6 +1155,11 @@ public class Login extends javax.swing.JFrame {
         statustf.setText("");
     }//GEN-LAST:event_jButton29ActionPerformed
 
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        jframe_showcustomerdetails.dispose();
+        jframe_home.setVisible(true);
+    }//GEN-LAST:event_jButton30ActionPerformed
+
     public static void main(String args[]) {
 
     }
@@ -1174,7 +1179,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
@@ -1192,6 +1196,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
